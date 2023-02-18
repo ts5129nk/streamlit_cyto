@@ -36,7 +36,9 @@ stylesheet = [
 layout ={"name":layout_set,"padding": 20}
 
 
-selected = cytoscape(elements, stylesheet,height="500px",layout=layout,
+selected = cytoscape(elements, stylesheet,height="600px",layout=layout,
         key="graph",)
 
 st.write(selected)
+for i in selected["nodes"]:
+    st.sidebar.info(i + ' is selected')
