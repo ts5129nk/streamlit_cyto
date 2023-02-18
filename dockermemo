@@ -1,0 +1,8 @@
+
+docker run -dit --name cyto -p 8501:8501 --mount type=bind,source=${PWD},target=/home/ cyto
+
+docker exec -it lingam bash
+
+
+docker build . -t lingam_img
+docker run -it --rm --name lingam_tmp -p 8502:8501 lingam_img streamlit run app.py
