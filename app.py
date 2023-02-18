@@ -6,7 +6,7 @@ st.set_page_config(layout="wide")
 
 st.title("Hello Cytoscape.js with Streamlit")
 
-layout_set = st.selectbox('select layout',('cose','breadthfirst','circle','grid'))
+layout_set = st.sidebar.selectbox('select layout',('cose','breadthfirst','circle','grid'))
 
 node_size = 60
 
